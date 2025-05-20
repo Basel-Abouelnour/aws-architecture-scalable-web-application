@@ -1,7 +1,7 @@
 # AWS Architecture: Scalable Web Application
 
 # High-level overview of the project:
-
+![Architectuer Diagram](images/manara-saa-project.jpg)
 ## Key AWS Services Used:
 
 * **EC2:** Launch instances for the web app.  
