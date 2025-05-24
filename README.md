@@ -2,7 +2,7 @@
 
 ## High-level overview of the project:
 
-![Architecture](images\manara-saa-project.drawio.png)
+![Architecture](images/manara-saa-project.drawio.png)
 
 ## Key AWS Services Used:
 
