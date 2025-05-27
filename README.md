@@ -6,7 +6,7 @@
 - [IAM Roles](#some-notes)
 - [Security Groups](#security-groups)
 - [Project Flow](#project-flow)
-- [Video: Project Implementation](#project-implementation)
+- [Video: Project Implementation](#video-project-implementation)
 
 ## High-level overview of the project:
 
