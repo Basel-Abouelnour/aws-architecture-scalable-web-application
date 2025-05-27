@@ -9,10 +9,10 @@
 - [Video: Project Implementation](#video-project-implementation)
 
 ## High-level overview of the project:
-
 ![Architecture](images/manara-saa-project.drawio.png)
 
 ## Key AWS Services Used:
+This is an architecture for a scalable web application on AWS using the following services:
 
 * **EC2:** Launch instances for the web app.  
 * **Application Load Balancer (ALB):** Distributes traffic across multiple instances.  
