@@ -1,4 +1,12 @@
 # AWS Architecture: Scalable Web Application
+## Content:
+- [High-level overview of the project](#high-level-overview-of-the-project)
+- [Key AWS Services Used](#key-aws-services-used)
+- [Some Notes](#some-notes)
+- [IAM Roles](#some-notes)
+- [Security Groups](#security-groups)
+- [Project Flow](#project-flow)
+- [Video: Project Implementation](#project-implementation)
 
 ## High-level overview of the project:
 
@@ -28,12 +36,13 @@
 3. CloudWatch: `CloudWatchReadOnlyAccess`
 ## Security Groups:
 
-|  | Inbound traffic | Outbound traffic |
-| :---- | :---- | :---- |
-| Web tier | HTTPS | IP of ALP (app tier) |
-| App tier | IP range of the web tier subnets & IP range of the RDS subnets | - |
-| ALB | - | - |
-| RDS | - | - |
+|              | Inbound traffic                      | Outbound traffic                       |
+| :----        | :----                                | :----                                  |
+| ALB web tier | 0.0.0.0/0  :80 , 443                 | IP range of web EC2 subnets :80 ,443   |
+| Web tier EC2 | IP of Web ALB : 80 , 443             | IP of App ALB:5000                     |
+| ALB app tier | IP range of the web EC2 Subnets :5000| IP range of App EC2 subnets : 5000     |
+| App tier EC2 | IP range of the web tier ALB:5000    | IP range of the RDS subnets : 3306     |
+| RDS (MYSQL)  |IP range of the app tier subnets :3306| -                                      |
 
 ## Project Flow:
 
@@ -58,3 +67,6 @@ to the ALB on the web tier.
    2. RDS failover and switching to the standby DB.  
 9. CloudWatch publishes a message to the SNS topic.  
 10.  The Admin is subscribed to the SNS topic, and he receives an email about the events.
+
+## Video: Project Implementation
+> To be added 
